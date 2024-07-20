@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-header class="header">
+        <mat-card-title>
+            Kalender:
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="content">
+        <hr>
+        <table>
+            @for(event of events; track event.startTime){
+                    <tr width="100%">
+                        <td width="40%">{{calculateLocale(event?.startTime!) | date: 'dd MMMM HH:mm':'sv-SE'}}</td>
+                        <td width="60%" align="left">{{ event?.summary }}</td>
+                    </tr>
+            }
+        </table>
+    </mat-card-content>
+  </mat-card>
+  

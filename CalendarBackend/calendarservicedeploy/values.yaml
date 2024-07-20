@@ -1,0 +1,2 @@
+image: "registry:5000/calendarservice:latest"
+host: "calendarservice.ubk3s" 

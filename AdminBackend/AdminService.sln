@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdminService", "AdminService\AdminService.csproj", "{1779474C-8689-47B0-9F23-658D530CEAF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "adminservicedeploy", "adminservicedeploy", "{B8E5E3F5-210E-484E-87D1-AD2241F66037}"
+	ProjectSection(SolutionItems) = preProject
+		adminservicedeploy\.helmignore = adminservicedeploy\.helmignore
+		adminservicedeploy\Chart.yaml = adminservicedeploy\Chart.yaml
+		adminservicedeploy\values.yaml = adminservicedeploy\values.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "charts", "charts", "{250A8FE1-9051-4B13-8E98-E329E65D0727}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "secrets", "secrets", "{9D635558-7866-46AB-91D6-230EB0B44C08}"
+	ProjectSection(SolutionItems) = preProject
+		adminservicedeploy\secrets\ConnectionStrings__DefaultConnection = adminservicedeploy\secrets\ConnectionStrings__DefaultConnection
+		adminservicedeploy\secrets\JwtSettings__Secret = adminservicedeploy\secrets\JwtSettings__Secret
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{840C58AA-D061-474C-8055-5CD794138E47}"
+	ProjectSection(SolutionItems) = preProject
+		adminservicedeploy\templates\configmap.yaml = adminservicedeploy\templates\configmap.yaml
+		adminservicedeploy\templates\deployment.yaml = adminservicedeploy\templates\deployment.yaml
+		adminservicedeploy\templates\ingress.yaml = adminservicedeploy\templates\ingress.yaml
+		adminservicedeploy\templates\persistentvolumeclaim.yaml = adminservicedeploy\templates\persistentvolumeclaim.yaml
+		adminservicedeploy\templates\secret.yaml = adminservicedeploy\templates\secret.yaml
+		adminservicedeploy\templates\service.yaml = adminservicedeploy\templates\service.yaml
+		adminservicedeploy\templates\_helpers.tpl = adminservicedeploy\templates\_helpers.tpl
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3871C3FA-CCF0-49EF-9EA8-753E12BF7237}"
+	ProjectSection(SolutionItems) = preProject
+		build.ps1 = build.ps1
+		deploy.ps1 = deploy.ps1
+		Publish.ps1 = Publish.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1779474C-8689-47B0-9F23-658D530CEAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1779474C-8689-47B0-9F23-658D530CEAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1779474C-8689-47B0-9F23-658D530CEAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1779474C-8689-47B0-9F23-658D530CEAF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{250A8FE1-9051-4B13-8E98-E329E65D0727} = {B8E5E3F5-210E-484E-87D1-AD2241F66037}
+		{9D635558-7866-46AB-91D6-230EB0B44C08} = {B8E5E3F5-210E-484E-87D1-AD2241F66037}
+		{840C58AA-D061-474C-8055-5CD794138E47} = {B8E5E3F5-210E-484E-87D1-AD2241F66037}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {613B261E-81E3-4962-8833-48617517B7AC}
+	EndGlobalSection
+EndGlobal

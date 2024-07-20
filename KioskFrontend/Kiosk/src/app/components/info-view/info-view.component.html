@@ -1,0 +1,26 @@
+<mat-card class="mat-card-extra">
+    <mat-card-header class="header">
+        <mat-card-title>
+            Info:
+        </mat-card-title>
+        <mat-card-subtitle>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="content">
+        @for(event of events; track event.expirationDate){
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    {{calculateLocale(event?.registeredAt!) | date: 'yyyy-MM-dd':'sv-SE'}}:
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="innertext" [innerHTML]="event?.content">
+                </div>
+            </mat-card-content>
+        </mat-card>
+        }
+    </mat-card-content>
+    <mat-card-footer class="footer">
+    </mat-card-footer>
+</mat-card>

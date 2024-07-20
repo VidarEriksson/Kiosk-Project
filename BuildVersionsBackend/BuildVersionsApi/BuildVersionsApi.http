@@ -1,0 +1,6 @@
+@BuildVersionsApi_HostAddress = http://localhost:5136
+
+GET {{BuildVersionsApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

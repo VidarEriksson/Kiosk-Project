@@ -1,0 +1,65 @@
+.mat-card-extra {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100.5cap;
+
+}
+
+mat-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border-color: blue;
+  border-width: 3px;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+mat-card-header {
+  text-align: center;
+  justify-content: center
+}
+
+mat-card-title {
+  text-align: center;
+  justify-content: center;
+  font-family: "Space Mono", "Courier New", monaco, monospace;
+  font-weight: bold;
+}
+
+mat-card-content {
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+  flex-grow: 1;
+  overflow: auto;
+}
+mat-card-footer {
+  text-align: center;
+  justify-content: center;
+  vertical-align: bottom;
+}
+
+mat-card-subtitle {
+  margin-top: 12px;
+  text-align: center;
+  justify-content: center
+}
+
+.moveThisShitToCentre {
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+table,
+th,
+td {
+  border: 1px groove black;
+  border-collapse: collapse;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+}

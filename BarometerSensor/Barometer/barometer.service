@@ -1,0 +1,11 @@
+﻿[Unit] 
+Description=Barometer for .NET with systemd
+
+[Service]
+ExecStart=/opt/microsoft/dotnet/dotnet /apps/barometer/Barometer.dll
+WorkingDirectory=/apps/barometer
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target

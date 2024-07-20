@@ -1,0 +1,2 @@
+image: "registry:5000/barometerservice:latest"
+host: "barometerservice.ubk3s" 

@@ -1,0 +1,6 @@
+@SogetiService_HostAddress = http://localhost:5111
+
+GET {{SogetiService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

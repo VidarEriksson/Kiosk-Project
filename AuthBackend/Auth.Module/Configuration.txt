@@ -1,0 +1,16 @@
+﻿{
+  "ConnectionStrings": {
+    "AuthDb": "Server=localhost;Port=3306;User=root;Password=password;Database=yourDb"
+
+  },
+  "JwtSettings": {
+    "Issuer": "https://authapi.local",
+    "Secret": "choose-secret",
+    "ExpirationInDays": 365,
+    "RequireDigit": false,
+    "RequiredLength": 6,
+    "RequireNonAlphanumeric": false,
+    "RequireUppercase": false,
+    "RequireLowercase": false
+  }
+}

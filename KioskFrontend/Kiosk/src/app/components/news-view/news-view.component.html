@@ -1,0 +1,30 @@
+<mat-card class="mat-card-outer">
+    <mat-card-content>
+        <div class="scroll-parent">
+            <div class="scroll-element primary">
+                @for(event of events; track event.date; let idx = $index){
+                    <mat-card class="mat-card-inner">
+                        <mat-card-content class="mat-card-content-inner">
+                            {{event.title}}
+                        </mat-card-content>
+                        <mat-card-footer>
+                            {{calculateLocale(event?.date!) | date: 'yyyy-MM-dd':'sv-SE'}}
+                        </mat-card-footer>
+                    </mat-card>
+                    }
+            </div>
+            <div class="scroll-element secondary">
+                @for(event of events; track event.date; let idx = $index){
+                <mat-card class="mat-card-inner">
+                    <mat-card-content class="mat-card-content-inner">
+                        {{event.title}}
+                    </mat-card-content>
+                    <mat-card-footer>
+                        {{calculateLocale(event?.date!) | date: 'yyyy-MM-dd':'sv-SE'}}
+                    </mat-card-footer>
+                </mat-card>
+                }
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

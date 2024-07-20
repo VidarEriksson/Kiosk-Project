@@ -1,0 +1,67 @@
+mat-card{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width:100.5cap;
+
+  background-color: #ffffff;
+  // margin: 10px;
+  // padding: 10px;
+  border-radius: 10px;
+  border-color: blue;
+  border-width: 3px;
+  box-shadow: 5px 5px 5px #888888;
+}
+mat-card-header {
+    text-align: center;
+    justify-content: center
+  }
+  
+  mat-card-title {
+    text-align: center;
+    justify-content: center;
+    font-family: "Space Mono", "Courier New", monaco, monospace;
+    font-weight: bold;
+  }
+  mat-card-subtitle{
+    margin-top: 12px;
+    text-align: center;
+    justify-content: center
+  }
+  .header {
+    text-align: center;
+    justify-content: center
+}
+.content{
+    text-align: center;
+    justify-content: center
+}
+.footer{
+    text-align: center;
+    justify-content: center
+}
+h2{
+  font-weight: normal;
+  margin-bottom:0;
+}
+h3{
+  font-weight: normal;
+  margin-top:0;
+  margin-bottom:10;
+}
+// tr{
+//   width: 100%;
+// }
+// td{
+//   width: 40%;
+// }
+table,
+th,
+td {
+  // border: 1px groove black;
+  border-collapse: collapse;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+}

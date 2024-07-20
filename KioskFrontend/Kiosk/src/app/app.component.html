@@ -1,0 +1,14 @@
+<main class="kiosk-content">
+  <div class="left-upper">
+    <app-weather-view></app-weather-view>
+  </div>
+  <div class="left-lower">
+      <app-calendar-view></app-calendar-view>
+  </div>
+  <div class="right-upper">
+      <ng-container *ngComponentOutlet="getComponent()" />
+  </div>
+  <div class="left-footer">
+    <app-news-view></app-news-view>
+  </div>
+</main>

@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-header class="header">
+    <mat-card-title>
+      <img src="{{ forecast?.symbol }}" />
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="content">
+    {{ forecast?.temperature?.toFixed() }}&deg; C<br />
+    {{ forecast?.precipitation }}
+    <hr />
+  </mat-card-content>
+  <mat-card-footer class="footer">
+    Vindhastighet: {{ forecast?.windSpeed?.toFixed() }} m/s<br />
+    Luftfuktighet: {{ forecast?.humidity?.toFixed() }} %<br />
+    Lufttryck: {{ forecast?.pressure?.toFixed() }} hPa
+  </mat-card-footer>
+</mat-card>

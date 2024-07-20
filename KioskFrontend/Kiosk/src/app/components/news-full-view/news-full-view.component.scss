@@ -1,0 +1,73 @@
+.mat-card-extra{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width:100.5cap;
+
+}
+mat-card{
+  background-color: #ffffff;
+  // margin: 10px;
+  // padding: 10px;
+  border-radius: 10px;
+  border-color: blue;
+  border-width: 3px;
+  box-shadow: 5px 5px 5px #888888;
+}
+mat-card-header {
+    text-align: center;
+    justify-content: center
+  }
+  
+  mat-card-title {
+    text-align: center;
+    justify-content: center;
+    font-family: "Space Mono", "Courier New", monaco, monospace;
+    font-weight: bold;
+  }
+  mat-card-subtitle{
+    margin-top: 12px;
+    text-align: center;
+    justify-content: center
+  }
+  tr{
+    vertical-align:top;
+  }
+  td{
+    vertical-align:top;
+  }
+  // table, th, td {
+  //   border: 1px solid black;
+  // }
+
+  /* Vertical Auto-Scrolling */
+.vertical-marquee {
+  height: 600px; /* Adjust based on your needs */
+  overflow: hidden;
+  position: relative;
+  // border: 1px solid #000;
+  // background-color: rgb(198, 236, 198);
+  // box-sizing: border-box;
+}
+
+.marquee-content {
+  position: absolute;
+  top: 100%;
+  animation: vertical-marquee 60s linear infinite;
+}
+
+.vertical-marquee p {
+  margin: 0px;
+  height: 700px; /* Same as the container height */
+  line-height: 100px; /* Center the text vertically */
+}
+
+@keyframes vertical-marquee {
+  0% {
+      top: 100%;
+  }
+  100% {
+      top: -300%; /* Adjust based on the number of lines */
+  }
+}

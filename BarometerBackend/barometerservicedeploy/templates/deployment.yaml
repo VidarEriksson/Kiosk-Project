@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: barometerservice-deployment
+  namespace: barometerservice
+  labels:
+    app: barometerservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: barometerservice
+  template:
+    metadata:
+      labels:
+        app: barometerservice
+    spec:
+      containers:
+      - name: barometerservice
+        image: {{ .Values.image }}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          name: http
+        envFrom:
+        - secretRef: 
+            name: barometerservice-secret
+        - configMapRef:
+            name: barometerservice-configmap
+        volumeMounts:
+          - name: barometerservice-storage
+            mountPath: "/data"
+        # livenessProbe:
+        #   httpGet:
+        #     path: /healthz
+        #     port: http
+        #   initialDelaySeconds: 30
+        #   timeoutSeconds: 30
+        # readinessProbe:
+        #   httpGet:
+        #     path: /healthz
+        #     port: http
+        #   initialDelaySeconds: 30
+        #   timeoutSeconds: 30
+      volumes:
+        - name: barometerservice-storage
+          persistentVolumeClaim:
+            claimName: barometerservice-claim

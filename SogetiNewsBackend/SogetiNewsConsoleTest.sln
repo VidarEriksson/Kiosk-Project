@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SogetiService", "SogetiService\SogetiService.csproj", "{43621A98-309F-4A76-891D-F89F85BE9B51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{14D40935-A49D-456F-BCE5-893E76ABC025}"
+	ProjectSection(SolutionItems) = preProject
+		build.ps1 = build.ps1
+		deploy.ps1 = deploy.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43621A98-309F-4A76-891D-F89F85BE9B51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43621A98-309F-4A76-891D-F89F85BE9B51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43621A98-309F-4A76-891D-F89F85BE9B51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43621A98-309F-4A76-891D-F89F85BE9B51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36E83EE4-4DB9-40E1-A96D-32650424C403}
+	EndGlobalSection
+EndGlobal

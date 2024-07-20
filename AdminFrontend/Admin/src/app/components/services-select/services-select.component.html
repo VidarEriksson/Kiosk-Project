@@ -1,0 +1,12 @@
+<div>
+  <mat-form-field>
+    <mat-label>Services</mat-label>
+    <mat-select [(value)]="selectedService">
+      @for (service of services; track service) {
+      <mat-option [value]="service">{{ service }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+  <mat-divider></mat-divider>
+  <app-service-edit [selectedService]="selectedService"></app-service-edit>
+</div>

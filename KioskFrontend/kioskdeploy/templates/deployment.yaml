@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kiosk
+  labels:
+    app: kiosk
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kiosk
+  template:
+    metadata:
+      labels:
+        app: kiosk
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "80"
+    spec:
+      containers:
+      - name: kiosk
+        image: {{ .Values.image }}
+        imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: kiosk-configmap
+        ports:
+        - containerPort: 80
+          name: http
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kiosk-configmap
+data:
+  DOTNET_ENVIRONMENT: "Production"
+  ASPNETCORE_ENVIRONMENT: "Production"
+  ASPNETCORE_HTTP_PORTS: "80"

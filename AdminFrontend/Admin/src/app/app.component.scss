@@ -1,0 +1,30 @@
+.kiosk-content{
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    gap: 1px;
+    grid-template-rows: 5fr 10fr;
+    // grid-auto-rows: minmax(100px, auto);
+    height: 100vh;
+}
+.left-upper{
+    // background-color: #0000ff;
+    grid-column: 1;
+    grid-row: 1;
+}
+.left-lower{
+    // background-color: #00ff00;
+    grid-column: 1;
+    grid-row: 2;
+}
+.right-upper{
+    // background-color: #ff0000;
+    grid-column: 2;
+    grid-row: 1;
+    grid-row: span 2;
+}
+.right-lower{
+    // background-color: #ff0000;
+    grid-column: 2;
+    grid-row: 2;
+    //grid-row: span 2;
+}

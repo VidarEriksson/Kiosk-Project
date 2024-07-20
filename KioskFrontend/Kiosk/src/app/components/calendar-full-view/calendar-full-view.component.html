@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Kalender (detaljerad vy):
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content text-align="center">
+        @if (events && events.length > 0) {
+        <table width="100%">
+            @for(event of events; track event.startTime){
+                    <tr>
+                        <td class="content"><h2>{{ event?.summary }}</h2></td>
+                    </tr>
+                    <tr>
+                        <td class="content"><h3>{{calculateLocale(event?.startTime!) | date: 'dd MMMM HH:mm':'sv-SE'}}
+                        - {{calculateLocale(event?.endTime!) | date: 'dd MMMM HH:mm':'sv-SE'}}</h3></td>
+                    </tr>
+                    <tr>
+                        <td class="content">{{ event?.description }}</td>
+                    </tr>
+                    <!-- <tr><td class="content"><br><hr></td></tr> -->
+            }
+        </table>
+    } @else {
+        <h2>Inga händelser att visa</h2>
+    }
+    </mat-card-content>
+</mat-card>

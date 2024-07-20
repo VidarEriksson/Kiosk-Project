@@ -1,0 +1,44 @@
+Make sure no npm/modejs exists
+choco install nvm
+nvm install latest/lts/versionnumber
+nvm use latest/lts/version
+npm install -g @angular/cli(@versionnumber)
+ng update
+
+Extra: To move from css to scss:
+https://medium.com/motf-creations/migrate-from-css-to-scss-stylesheets-for-existing-angular-application-d61f8061f5b7
+npm install schematics-scss-migrate
+ng g schematics-scss-migrate:scss-migrate
+
+Angular create project:
+ng new TimeBilling.Web --skip-tests --style scss --routing true
+cd TimeBilling.Web
+
+ng add @angular/material@16.2.4
+
+ng g class models/workload --type=model
+ng g class models/person --type=model
+ng g class models/customer --type=model
+
+ng g s services/timebilling
+
+ng g c components/home
+ng g c components/nav-menu
+
+ng g module modules/workloads
+ng g c modules/workloads/components/add-workload --module=modules/workloads
+ng g c modules/workloads/components/workloads-list --module=modules/workloads
+ng g c modules/workloads/components/workload-details --module=modules/workloads
+
+ng g module modules/people
+ng g c modules/people/components/add-person --module=modules/people
+ng g c modules/people/components/people-list --module=modules/people
+ng g c modules/people/components/person-details --module=modules/people
+
+ng g module modules/customers --route customers --module app.module
+ng g c modules/customers/components/add-customer --module=modules/customers
+ng g c modules/customers/components/customers-list --module=modules/customers
+ng g c modules/customers/components/customer-details --module=modules/customers
+
+ng generate interceptor interceptors/token --skip-tests
+ng generate guard guards/loggedin --skip-tests

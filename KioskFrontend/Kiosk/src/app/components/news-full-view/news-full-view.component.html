@@ -1,0 +1,33 @@
+<mat-card class="mat-card-extra">
+    <mat-card-header>
+        <mat-card-title>
+            News:
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="vertical-marquee">
+            <div class="marquee-content">
+                @for (event of events; track $index) {
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>
+                            {{calculateLocale(event?.date!) | date: 'yyyy-MM-dd':'sv-SE'}}:
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <table>
+                            <tr>
+                                <td rowspan="2"><img src="{{event?.imageUrl}}" /></td>
+                                <td style="height:10px;font-size:larger;font-weight: bold;">{{event?.title}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{event?.intro}}</td>
+                            </tr>
+                        </table>
+                    </mat-card-content>
+                </mat-card>
+                }
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

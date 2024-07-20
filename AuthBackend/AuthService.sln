@@ -1,0 +1,67 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth.Module", "Auth.Module\Auth.Module.csproj", "{DFBBFDDB-41CD-4B2A-A4A1-0ED0ED283ADA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthService", "AuthService\AuthService.csproj", "{56EFBD35-FB6F-475E-9B5F-F895848F895B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B97FEA12-DA23-4F5B-B263-A135D150E49A}"
+	ProjectSection(SolutionItems) = preProject
+		build.ps1 = build.ps1
+		deploy.ps1 = deploy.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "authservicedeploy", "authservicedeploy", "{8734837C-6505-40FC-A10B-7D9E9CA07824}"
+	ProjectSection(SolutionItems) = preProject
+		authservicedeploy\.helmignore = authservicedeploy\.helmignore
+		authservicedeploy\Chart.yaml = authservicedeploy\Chart.yaml
+		authservicedeploy\values.yaml = authservicedeploy\values.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "charts", "charts", "{BF6EE1E9-D917-4809-A88B-C6A83B310469}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "secrets", "secrets", "{8DCE2CDF-5755-4A46-8360-3607D5940A8E}"
+	ProjectSection(SolutionItems) = preProject
+		authservicedeploy\secrets\ConnectionStrings__AuthDb = authservicedeploy\secrets\ConnectionStrings__AuthDb
+		authservicedeploy\secrets\JwtSettings__Secret = authservicedeploy\secrets\JwtSettings__Secret
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{7F7184E9-8EAA-4A85-BB53-0A1D2C6141D6}"
+	ProjectSection(SolutionItems) = preProject
+		authservicedeploy\templates\_helpers.tpl = authservicedeploy\templates\_helpers.tpl
+		authservicedeploy\templates\configmap.yaml = authservicedeploy\templates\configmap.yaml
+		authservicedeploy\templates\deployment.yaml = authservicedeploy\templates\deployment.yaml
+		authservicedeploy\templates\ingress.yaml = authservicedeploy\templates\ingress.yaml
+		authservicedeploy\templates\persistentvolumeclaim.yaml = authservicedeploy\templates\persistentvolumeclaim.yaml
+		authservicedeploy\templates\secret.yaml = authservicedeploy\templates\secret.yaml
+		authservicedeploy\templates\service.yaml = authservicedeploy\templates\service.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFBBFDDB-41CD-4B2A-A4A1-0ED0ED283ADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFBBFDDB-41CD-4B2A-A4A1-0ED0ED283ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFBBFDDB-41CD-4B2A-A4A1-0ED0ED283ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFBBFDDB-41CD-4B2A-A4A1-0ED0ED283ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56EFBD35-FB6F-475E-9B5F-F895848F895B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56EFBD35-FB6F-475E-9B5F-F895848F895B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56EFBD35-FB6F-475E-9B5F-F895848F895B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56EFBD35-FB6F-475E-9B5F-F895848F895B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F7184E9-8EAA-4A85-BB53-0A1D2C6141D6} = {8734837C-6505-40FC-A10B-7D9E9CA07824}
+		{8DCE2CDF-5755-4A46-8360-3607D5940A8E} = {8734837C-6505-40FC-A10B-7D9E9CA07824}
+		{BF6EE1E9-D917-4809-A88B-C6A83B310469} = {8734837C-6505-40FC-A10B-7D9E9CA07824}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8E2D313-7884-4AC6-9104-5F0D22BF5CB2}
+	EndGlobalSection
+EndGlobal

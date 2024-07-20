@@ -1,0 +1,16 @@
+<header>
+  <mat-toolbar>
+    <button mat-flat-button [routerLink]="['/']">Home</button>
+    <span class="spacer"></span>
+    @if(isAuthenticated){
+
+    <button mat-flat-button (click)="logout()">Log out</button>
+    <button mat-flat-button [routerLink]="['/user']">
+      {{ username }}
+    </button>
+    } @else {
+
+    <button mat-flat-button (click)="login()">Log in</button>
+    }
+  </mat-toolbar>
+</header>

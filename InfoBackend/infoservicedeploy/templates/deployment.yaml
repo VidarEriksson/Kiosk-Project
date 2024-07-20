@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: infoservice-deployment
+  namespace: infoservice
+  labels:
+    app: infoservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: infoservice
+  template:
+    metadata:
+      labels:
+        app: infoservice
+    spec:
+      containers:
+      - name: infoservice
+        image: {{ .Values.image }}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        envFrom:
+        - secretRef: 
+            name: infoservice-secret
+        - configMapRef:
+            name: infoservice-configmap

@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: buildversionsapi-deployment
+  namespace: buildversionsapi
+  labels:
+    app: buildversionsapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: buildversionsapi
+  template:
+    metadata:
+      labels:
+        app: buildversionsapi
+    spec:
+      containers:
+      - name: buildversionsapi
+        image: {{ .Values.image }}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          name: http
+        envFrom:
+        - secretRef: 
+            name: buildversionsapi-secret
+        - configMapRef:
+            name: buildversionsapi-configmap
+        volumeMounts:
+          - name: buildversionsapi-storage
+            mountPath: "/data"
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: http
+          initialDelaySeconds: 30
+          timeoutSeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: http
+          initialDelaySeconds: 30
+          timeoutSeconds: 30
+      volumes:
+        - name: buildversionsapi-storage
+          persistentVolumeClaim:
+            claimName: buildversionsapi-claim

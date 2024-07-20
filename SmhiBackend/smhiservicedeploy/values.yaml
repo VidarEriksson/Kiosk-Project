@@ -1,0 +1,2 @@
+image: "registry:5000/smhiservice:latest"
+host: "smhiservice.ubk3s" 

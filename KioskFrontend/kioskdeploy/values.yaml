@@ -1,0 +1,2 @@
+image: "registry:5000/kiosk:latest"
+host: "kiosk.ubk3s" 

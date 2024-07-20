@@ -1,0 +1,2 @@
+image: "registry:5000/adminservice:latest"
+host: "adminservice.ubk3s" 

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sogetiservice-deployment
+  namespace: sogetiservice
+  labels:
+    app: sogetiservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sogetiservice
+  template:
+    metadata:
+      labels:
+        app: sogetiservice
+    spec:
+      containers:
+      - name: sogetiservice
+        image: {{ .Values.image }}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        envFrom:
+        - secretRef: 
+            name: sogetiservice-secret
+        - configMapRef:
+            name: sogetiservice-configmap
+

@@ -1,0 +1,39 @@
+<mat-card class="mat-card-extra">
+    <mat-card-header>
+        <mat-card-title>
+            SMHI:
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="moveThisShitToCentre">
+        <p>&nbsp;</p>
+        Idag:
+        <table width="100%">
+            <tr>
+                @for(forecast of forecasts?.slice(0,7); track forecast.validTime){
+                <td>
+                    <p>{{forecast?.validTime! | date: 'HH:mm':'sv-SE'}}</p>
+                    <img src="{{ forecast?.symbol }}" />
+                    <p>{{ forecast?.temperature?.toFixed() }}&deg; C</p>
+                    <p>Fukt: {{forecast?.humidity!.toFixed()}}%</p>
+                </td>
+                }
+            </tr>
+        </table>
+        <br>
+        Kommande vecka:
+        <table width="100%">
+            <tr>
+                @for(forecast of noonValues?.slice(0,7); track forecast.validTime){
+                    <td>
+                        <p>{{forecast?.validTime! | date: 'dd/MM':'sv-SE'}}</p>
+                        <img src="{{ forecast?.symbol }}" />
+                        <p>{{forecast?.temperature!.toFixed()}}&deg; C</p>
+                        <p>Fukt: {{forecast?.humidity!.toFixed()}}%</p>
+                    </td>
+                    }
+            </tr>
+        </table>
+    </div>
+    </mat-card-content>
+</mat-card>
